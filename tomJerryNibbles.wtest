@@ -3,7 +3,24 @@ import tomJerryNibbles.*
 describe "Grupo de test" {
 
   test "test 1" {
-    assert.equals(100, 50+50)
+    assert.equals(10, tom.velocidadMax())
+    assert.equals(50, tom.energia())
+    tom.comer(jerry)
+    assert.equals(15.2, tom.velocidadMax())
+    assert.equals(102, tom.energia())
+    tom.correr(24)
+    assert.equals(14, tom.velocidadMax())
+    assert.equals(90, tom.energia())
+    tom.comer(nibbles)
+    assert.equals(18.7, tom.velocidadMax())
+    assert.equals(137, tom.energia())
+    jerry.cumplirAnios()
+    tom.comer(jerry)
+    assert.equals(25.9, tom.velocidadMax())
+    assert.equals(209, tom.energia())
+    tom.correr(38)
+    assert.equals(24, tom.velocidadMax())
+    assert.equals(190, tom.energia())
   }
 
   test "test 3" {
